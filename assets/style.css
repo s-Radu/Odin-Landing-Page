@@ -1,0 +1,124 @@
+/*! Resets */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+/*! Content styles */
+/*? body and nav section */
+
+body {
+  height: 100vh;
+  background-image: url("/pics/sphynx6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-img {
+  max-width: 8rem;
+  margin-left: 2rem;
+}
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  max-height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(214, 17%, 27%);
+  border-radius: 1rem;
+}
+.nav-links {
+  margin-right: 2rem;
+  display: flex;
+  gap: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.nav-links a {
+  font-size: 1.3rem;
+}
+.nav-links a:hover {
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+/*? hero section */
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 9rem;
+  height: 30vh;
+  margin: 0 10rem 0 10rem;
+}
+.hero-text {
+  grid-area: 1 / 1 / 2 / 2;
+  border-radius: 1rem;
+  background-color: hsla(215, 28%, 17%, 0.699);
+  margin-top: 50%;
+  box-shadow: 0 0 5px 5px hsl(0, 0%, 100%);
+}
+.hero-title {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+  margin: 1.2rem;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: hsl(0, 0%, 100%);
+  margin: 1.2rem;
+}
+.hero-btn {
+  font-family: "Courier New", Courier, monospace;
+  background-color: hsl(217, 91%, 59%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  margin: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  scale: 1.1;
+}
+.hero-placeholderImg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 1 / 2 / 2 / 3;
+  margin-top: 50%;
+}
+.hero-img {
+  max-width: 22rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px 5px hsl(0, 0%, 100%);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hero-img:hover {
+  scale: 1.1;
+  translate: -5%;
+}
