@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 a,
 a:active,
@@ -157,20 +158,20 @@ body {
   max-height: 16.5rem;
 }
 .card-text {
-  max-width: 9.5rem;
+  max-width: 9rem;
   text-align: center;
   margin: auto;
   text-shadow: 5px 5px 5px hsla(215, 28%, 17%);
   transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: none;
+  opacity: 0;
+  font-size: 1.1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: hsl(0, 0%, 100%);
+  pointer-events: none;
 }
 .card-text.active {
-  transform: translatey(-180%);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.1rem;
-  color: hsl(0, 0%, 100%);
-
-  display: block;
+  transform: translatey(-170%);
+  opacity: 1;
 }
 
 /* ? Future breakpoints */
