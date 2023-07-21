@@ -23,7 +23,6 @@ li {
 /*? body and nav section */
 
 body {
-  height: 100vh;
   background-image: url("/pics/sphynx6.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -67,25 +66,28 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 9rem;
-  height: 30vh;
-  margin: 0 10rem 0 10rem;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
 }
 .hero-text {
   grid-area: 1 / 1 / 2 / 2;
   border-radius: 1rem;
   background-color: hsla(215, 28%, 17%, 0.699);
-  margin-top: 50%;
-  box-shadow: 0 0 5px 5px hsl(0, 0%, 100%);
+  margin-left: 5rem;
+  max-width: 700px;
+  max-height: 23rem;
+  box-shadow: 3px -2px 5px 5px hsl(0, 0%, 100%);
 }
 .hero-title {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 3rem;
+  font-size: 3vw;
   color: hsl(0, 0%, 100%);
   margin: 1.2rem;
 }
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: hsl(0, 0%, 100%);
@@ -110,10 +112,9 @@ body {
   align-items: center;
   justify-content: center;
   grid-area: 1 / 2 / 2 / 3;
-  margin-top: 50%;
 }
 .hero-img {
-  max-width: 22rem;
+  max-height: 23rem;
   border-radius: 1rem;
   box-shadow: 0 0 5px 5px hsl(0, 0%, 100%);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -121,4 +122,60 @@ body {
 .hero-img:hover {
   scale: 1.1;
   translate: -5%;
+}
+
+/* ? info section */
+
+.random-info {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-title {
+  text-align: center;
+  margin: -15% 0 5rem 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 5px 5px 5px hsl(0, 0%, 100%);
+  font-size: 5vh;
+}
+.info-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card-img {
+  max-width: 11rem;
+  border-radius: 1rem;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card-img.active {
+  filter: blur(2px);
+}
+.card {
+  cursor: pointer;
+  max-height: 16.5rem;
+}
+.card-text {
+  max-width: 9.5rem;
+  text-align: center;
+  margin: auto;
+  text-shadow: 5px 5px 5px hsla(215, 28%, 17%);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: none;
+}
+.card-text.active {
+  transform: translatey(-180%);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 100%);
+
+  display: block;
+}
+
+/* ? Future breakpoints */
+@media (max-width: 960px) {
+  .hero-text {
+    max-height: 50rem;
+  }
 }
