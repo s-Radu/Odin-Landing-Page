@@ -131,11 +131,11 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .info-title {
   text-align: center;
-  margin: -15% 0 5rem 0;
+  margin: 0 0 3rem 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: 5px 5px 5px hsl(0, 0%, 100%);
   font-size: 5vh;
@@ -170,8 +170,25 @@ body {
   pointer-events: none;
 }
 .card-text.active {
-  transform: translatey(-170%);
+  transform: translatey(-160%);
   opacity: 1;
+}
+
+/* ? quote section */
+
+.quote-wrapper {
+  margin: 0 auto;
+  max-width: 80%;
+  background-color: hsla(240, 100%, 27%, 0.407);
+  border-radius: 1rem;
+  padding: 0.8rem;
+}
+.quote {
+  font-size: 2.7vw;
+  margin-left: 1rem;
+  text-indent: 3.5rem;
+  color: hsl(0, 0%, 100%);
+  font-style: italic;
 }
 
 /* ? Future breakpoints */
@@ -179,4 +196,15 @@ body {
   .hero-text {
     max-height: 50rem;
   }
+  .hero-img {
+    max-height: 15rem;
+  }
+  /* .hero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+  } */
 }
