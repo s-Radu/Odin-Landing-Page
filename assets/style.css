@@ -54,15 +54,9 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.nav-links.active{
-  
-}
 .nav-links a {
   font-size: 1.3rem;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.nav-links a:hover {
-  border-bottom: 1px solid hsl(0, 0%, 100%);
 }
 .hamburger-menu {
   display: flex;
@@ -73,6 +67,35 @@ body {
   top: 10%;
   right: -50%;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+.hamburger-menu.active {
+  right: 1.5%;
+  top: 30%;
+}
+.nav-links.active {
+  position: absolute;
+  flex-direction: column;
+  right: -2.5%;
+  top: 100%;
+}
+.nav-links.hide {
+  position: absolute;
+  right: -100%;
+}
+.nav-link.active {
+  font-size: 1rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: -0.3rem;
+  text-align: center;
+  padding: 0.25rem 0 0.5rem 0;
+  border-radius: 1rem;
+  background-color: hsla(220, 13%, 91%, 0.815);
+  transition-delay: 0.1s;
+}
+.nav-link:hover {
+  scale: 0.9;
 }
 .line {
   width: 2rem;
@@ -278,25 +301,6 @@ body {
   .hero-img {
     max-height: 15rem;
     margin-right: 3rem;
-  }
-  .nav-links {
-    position: absolute;
-    flex-direction: column;
-    right: -3%;
-    top: 100%;
-  }
-  .nav-link {
-    font-size: 1rem;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: -0.3rem;
-    padding: 0.25rem 0 0.5rem 0;
-    border-radius: 1rem;
-    background-color: hsla(220, 13%, 91%, 0.815);
-  }
-  .hamburger-menu {
-    right: 1%;
-    top: 30%;
   }
 }
 
