@@ -32,6 +32,7 @@ body {
 .nav-img {
   max-width: 5rem;
   margin-left: 2rem;
+  margin-top: 0.25rem;
 }
 .nav-bar {
   position: fixed;
@@ -53,11 +54,30 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+.nav-links.active{
+  
+}
 .nav-links a {
   font-size: 1.3rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .nav-links a:hover {
   border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1.5rem;
+  position: absolute;
+  top: 10%;
+  right: -50%;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.line {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: hsl(0, 0%, 0%);
 }
 
 /*? hero section */
@@ -135,10 +155,15 @@ body {
 }
 .info-title {
   text-align: center;
-  margin: 3rem 0 3rem 0;
+  align-self: center;
+  font-size: 5vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: 5px 5px 5px hsl(0, 0%, 100%);
-  font-size: 5vh;
+  margin: 3rem 0 3rem 0;
+  background-color: hsla(220, 13%, 91%, 0.815);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
 }
 .info-cards {
   display: flex;
@@ -244,18 +269,60 @@ body {
 
 /* ? Future breakpoints */
 @media (max-width: 960px) {
+  .nav-bar {
+    justify-content: center;
+  }
   .hero-text {
     max-height: 50rem;
   }
   .hero-img {
     max-height: 15rem;
+    margin-right: 3rem;
   }
-  /* .hero {
+  .nav-links {
+    position: absolute;
+    flex-direction: column;
+    right: -3%;
+    top: 100%;
+  }
+  .nav-link {
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -0.3rem;
+    padding: 0.25rem 0 0.5rem 0;
+    border-radius: 1rem;
+    background-color: hsla(220, 13%, 91%, 0.815);
+  }
+  .hamburger-menu {
+    right: 1%;
+    top: 30%;
+  }
+}
+
+@media (max-width: 695px) {
+  .hero-img {
+    max-height: 12rem;
+    margin: auto;
+  }
+  .hero {
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
+    align-content: center;
     justify-content: center;
-    gap: 5rem;
     align-items: center;
-  } */
+    gap: 5rem;
+  }
+  .hero-title {
+    font-size: 4vw;
+  }
+  .hero-subtitle {
+    font-size: 2vw;
+  }
+  .hero-text {
+    margin-right: 5rem;
+  }
+  .info-title {
+    font-size: 8vw;
+  }
 }
