@@ -3,7 +3,7 @@ const navLinks = document.getElementById("nav-links");
 const hamburgerLinks = document.querySelectorAll("[data-nav-link]");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 
-// ? For each card that is hovered over, the class active is added and removed when hovered away.
+// TODO  MAKE THE HAMBURGER GO BACK TO IT'S ORIGINAL STATE WHEN A LINK IS CLICKED
 
 cards.forEach((card) => {
   const cardImg = card.querySelector("img");
@@ -30,7 +30,7 @@ hamburgerMenu.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-function updateStae() {
+function updateState() {
   if (window.innerWidth > 960) {
     hamburgerMenu.classList.remove("active");
     navLinks.classList.remove("hide");
@@ -41,8 +41,8 @@ function updateStae() {
 }
 
 window.onload = () => {
-  updateStae();
+  updateState();
 };
 window.addEventListener("resize", () => {
-  updateStae();
+  updateState();
 });
